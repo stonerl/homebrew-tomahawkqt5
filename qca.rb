@@ -1,8 +1,9 @@
 require "formula"
 
 class Qca < Formula
+  version "2.1.0.3"
   homepage "http://delta.affinix.com/qca/"
-  url "http://ftp.uni-kl.de/pub/linux/kde/stable/qca-qt5/2.1.0.3/src/qca-qt5-2.1.0.3.tar.xz"
+  url "http://ftp.uni-kl.de/pub/linux/kde/stable/qca-qt5/#{version}/src/qca-qt5-#{version}.tar.xz"
   sha256 "ab0170696a8ff87588d38a72d36d0b4b42db9080c991d1a40ceb3f8311d289f9"
   head "git://anongit.kde.org/qca.git"
 
@@ -26,7 +27,7 @@ class Qca < Formula
     depends_on "doxygen" => [:build, "with-dot"]
   end
 
-    # Fixes build with Qt 5.5 by adding a missing include (already fixed in HEAD).
+  # Fixes build with Qt 5.5 by adding a missing include (already fixed in HEAD).
   patch do
     url "http://quickgit.kde.org/?p=qca.git&a=commitdiff&h=7207e6285e932044cd66d49d0dc484666cfb0092&o=plain"
     sha256 "b3ab2eb010f4a16f85349e4b858d0ee17a84ba2927311b79aeeff1bb2465cd3d"
